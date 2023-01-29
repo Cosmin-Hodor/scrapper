@@ -1,12 +1,13 @@
-extern crate hyper;
-extern crate regex;
-
-use hyper::client::Client;
-use std::io::Read;
-use regex::Regex;
-
 fn main() {
   let client = Client::new();
+  let mut url = String::new();
+  
+  // Read URL from user input
+  println!("Enter URL:");
+  std::io::stdin().read_line(&mut url).unwrap();
+
+  // Trim newline from URL string
+  url = url.trim().to_string();
 
   // Retrieves page
   let mut response = client.get(url).send().unwrap();
