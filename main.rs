@@ -5,7 +5,7 @@ use hyper::client::Client;
 use std::io::Read;
 use regex::Regex;
 
-fn main(url: String) {
+fn main() {
   let client = Client::new();
 
   // Retrieves page
