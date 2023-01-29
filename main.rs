@@ -1,3 +1,10 @@
+extern crate hyper;
+extern crate regex;
+
+use hyper::client::Client;
+use std::io::Read;
+use regex::Regex;
+
 fn main() {
   let client = Client::new();
   let mut url = String::new();
